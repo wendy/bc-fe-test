@@ -6,11 +6,24 @@
 
     <link rel="stylesheet" type="text/css" href="src/style.css">
   </head>
-  <body>
+  <body ng-app="app">
+    <header>
+      <h1>My Books</h1>
+      <my-nav></my-nav>
+    </header>
+    <main>
+      <section>
+      </section>
+      <section>   
+      </section>
+    </main>
+
     <!-- lib -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 
     <!-- files -->
     <script src="src/app.js"></script>
+    <script src="src/app/books/books.service.js"></script>
+    <script src="src/app/nav/nav.js"></script>
   </body>
 </html>
