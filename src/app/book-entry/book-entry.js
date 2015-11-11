@@ -10,4 +10,10 @@ angular.module('app.book-entry', [])
   .controller('EntryCtrl', function (booksService) {
     var entry = this;
 
+    entry.newBook = {};
+
+    entry.submitBook = function () {
+      booksService.addBook(entry.newBook);
+      entry.newBook = {};
+    }
   });

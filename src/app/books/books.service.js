@@ -1,8 +1,8 @@
 angular.module('app.books.service', [])
   .factory('booksService', function () {
     var books = [
-      {title: 'El Pooch', author: 'Alex Nelson', url: ''},
-      {title: 'The Flight', author: 'Scott Masterson', url: ''}
+      {title: 'El Pooch', author: 'Alex Nelson', imageUrl: ''},
+      {title: 'The Flight', author: 'Scott Masterson', imageUrl: ''}
     ];
 
     var service = {
