@@ -9,8 +9,9 @@ angular.module('app.book-entry', [])
   })
   .controller('EntryCtrl', function (booksService) {
     var entry = this;
-
     entry.newBook = {};
+    entry.showWelcome = true;
+    entry.showEntry = false;
 
     entry.submitBook = function () {
       booksService.addBook(entry.newBook);

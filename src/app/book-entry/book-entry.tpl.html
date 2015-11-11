@@ -1,21 +1,21 @@
-<section>
-  <h2> Welcome </h2>
-  <p>It's been awhile.</p>
-  <p>Read any new books lately</p>  
-</section>
-<section>
-  <button>No</button>
-  <button>Yes</button>
-</section>
+<section ng-show="entry.showWelcome">
+  <section>
+    <h2> Welcome </h2>
+    <p>It's been awhile.</p>
+    <p>Read any new books lately</p>  
 
-<section>
-  <form ng-submit="entry.submitBook()">
-    <label for="book-title">Title</label>
-    <input id="book-title" placeholder="Title" ng-model="entry.newBook.title" />
-    <label for="book-author">Author</label>
-    <input id="book-author" placeholder="Author" ng-model="entry.newBook.author" />
-    <label for="book-imageUrl">Image Url</label>
-    <input id="book-imageUrl" placeholder="Url" ng-model="entry.newBook.imageUrl" />
-    <button>Submit</button>
-  </form>
+    <button ng-click="entry.showWelcome = false">No</button>
+    <button ng-click="entry.showEntry = true">Yes</button>
+  </section>
+  <section id="book-entry" class="book-entry" ng-show="entry.showEntry">
+    <form ng-submit="entry.submitBook()">
+      <label for="book-title">Title</label>
+      <input id="book-title" placeholder="Title" ng-model="entry.newBook.title" />
+      <label for="book-author">Author</label>
+      <input id="book-author" placeholder="Author" ng-model="entry.newBook.author" />
+      <label for="book-imageUrl">Image Url</label>
+      <input id="book-imageUrl" placeholder="Url" ng-model="entry.newBook.imageUrl" />
+      <button>Submit</button>
+    </form>
+  </section>
 </section>
