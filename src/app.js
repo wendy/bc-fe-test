@@ -1,4 +1,6 @@
 angular.module('app', [
   'app.books.service',
-  'app.nav'
+  'app.nav',
+  'app.book-entry',
+  'app.books-list'
 ]);

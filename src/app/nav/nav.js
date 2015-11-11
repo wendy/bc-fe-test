@@ -5,7 +5,7 @@ angular.module('app.nav', [])
       scope: {},
       templateUrl: 'src/app/nav/nav.tpl.html',
       controller: 'NavCtrl as nav'
-    }
+    };
   })
   .controller('NavCtrl', function (booksService) {
     var nav = this;
