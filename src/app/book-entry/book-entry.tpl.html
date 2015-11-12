@@ -1,11 +1,12 @@
-<section ng-show="entry.showWelcome">
-  <section>
-    <h2> Welcome </h2>
-    <p>It's been awhile.</p>
-    <p>Read any new books lately</p>  
-
-    <button ng-click="entry.showWelcome = false">No</button>
-    <button ng-click="entry.showEntry = true">Yes</button>
+<section ng-show="entry.showWelcome" class="welcome">
+  <section class="welcomeHeader">
+    <h2 class="welcomeTitle">Welcome back!</h2>
+    <p class="welcomeParagraph">It's been awhile.</p>
+    <p class="welcomeParagraph">Read any new books lately?</p>  
+  </section>
+  <section class="welcomeButtons">
+    <button ng-click="entry.showWelcome = false" class="welcomeButton">NO</button>
+    <button ng-click="entry.showEntry = true" class="welcomeButton yellow">YES</button>
   </section>
   <section id="book-entry" class="book-entry" ng-show="entry.showEntry">
     <form ng-submit="entry.submitBook()">

@@ -1,16 +1,16 @@
-<main class="mainHeader" ng-class="{fixed: nav.showNav}">
-  <section class="header">
+<main class="mainHeader">
+  <section class="sectionHeader">
     <section class="titleContainer">
       <i ng-if="!nav.showNav" class="fa fa-bars navIcon" ng-click="nav.showNav=true"></i>
       <i ng-if="nav.showNav" class="fa fa-times closeIcon" ng-click="nav.showNav=false"></i>
       <h1 class="title">My books</h1>
     </section>
   </section>
-  <nav ng-show="nav.showNav" class="navBar">
-    <ul class="navList">
-      <li class="navItem" ng-repeat="book in nav.getBooks()">
-        <h3 class="navTitle">{{ book.title }}</h3>
-      </li>
-    </ul>
-  </nav>
 </main>
+<nav ng-show="nav.showNav" class="navBar">
+  <ul class="navList">
+    <li class="navItem" ng-repeat="book in nav.getBooks()">
+      <h3 class="navTitle">{{ book.title }}</h3>
+    </li>
+  </ul>
+</nav>
