@@ -10,8 +10,29 @@ angular.module('app.books.service', [])
         return books;
       },
       addBook: function (book) {
-        books.push(book);
-        return book;
+        var addedBook = true;
+
+        if (book.title === undefined || book.author === undefined) {
+          addedBook = false;
+        } else if (service.isDuplicate(book.title)) {
+          addedBook = false;
+        } else {
+          if (book.imageUrl === undefined) {
+            book.imageUrl = 'http://www.gibbahouse.com/wp-content/uploads/2014/02/20-Funny-Shocked-Cat-Memes-3.jpg';
+          }
+          books.push(book);
+        }
+
+        return addedBook;
+      },
+      isDuplicate: function(title) {
+        for (var i = 0; i < books.length; i++) {
+          if (books[i].title === title) {
+            return true;
+          }
+        }
+
+        return false;
       }
     };
 
