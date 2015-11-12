@@ -11,8 +11,10 @@ angular.module('app.book', [])
   })
   .controller('BookCtrl', function () {
     var bookCtrl = this;
+
     bookCtrl.showStars = false;
     bookCtrl.stars = {};
+    
     bookCtrl.starsNum = function(num) {
       for (var i = 1; i < 6; i++) {
         if (i <= num) {

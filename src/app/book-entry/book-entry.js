@@ -7,8 +7,9 @@ angular.module('app.book-entry', [])
       controller: 'EntryCtrl as entry'
     };
   })
-  .controller('EntryCtrl', function (booksService) {
+  .controller('EntryCtrl', function ($window, booksService) {
     var entry = this;
+
     entry.newBook = {};
     entry.showWelcome = true;
     entry.showEntry = false;
@@ -16,8 +17,9 @@ angular.module('app.book-entry', [])
 
     entry.submitBook = function () {
       var addedBook = booksService.addBook(entry.newBook);
+
       if (!addedBook) {
-        alert('Book did not get added for one of the following reasons:\n' +
+        $window.alert('Book did not get added for one of the following reasons:\n' +
               '1. Duplicate Title\n' +
               '2. Missing Title\n' + 
               '3. Missing Author\n');
