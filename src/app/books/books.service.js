@@ -6,7 +6,12 @@ angular.module('app.books.service', [])
     ];
 
     var service = {
-      getBooks: function () {
+      getBooks: function (filter) {
+        if (!!filter) {
+          books.sort(function (a,b) {
+            return a[filter].toUpperCase() > b[filter].toUpperCase();
+          });          
+        }
         return books;
       },
       addBook: function (book) {
@@ -27,7 +32,7 @@ angular.module('app.books.service', [])
       },
       isDuplicate: function(title) {
         for (var i = 0; i < books.length; i++) {
-          if (books[i].title === title) {
+          if (books[i].title.toUpperCase() === title.toUpperCase()) {
             return true;
           }
         }

@@ -10,7 +10,10 @@ angular.module('app.books-list', [])
   .controller('ListCtrl', function (booksService) {
     var list = this;
 
-    list.getBooks = function () {
-      return booksService.getBooks();
+    list.getBooks = function (filter) {
+      return booksService.getBooks(filter);
     };
+
+    list.books = list.getBooks();
+
   });

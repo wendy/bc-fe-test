@@ -176,6 +176,7 @@ button:focus {
   padding: 1.5em;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
 }
 
 .entryLabel {
@@ -199,9 +200,29 @@ button:focus {
   box-shadow: 1px 1px 1px #ccc;
 }
 
+.closeEntryIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 /* BOOK LIST */
 .bookList {
   margin: 2%;
+}
+
+.sortTitle {
+  position: absolute;
+  top: 16px;
+  right: 100px;
+  z-index: 10;
+}
+
+.sortAuthor {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  z-index: 10; 
 }
 
 .bookItem {
@@ -303,21 +324,16 @@ button:focus {
     background-color: #fff;
     height: 2em;
     position: static;
+    display: flex;
   }
 
   .navItem {
-    display: inline-block;
-    height: 100%;
-    width: 100px;
+    height: inherit;
+    width: initial;
     position: relative;
+    border: none;
   }
 
-  .navTitle {
-    position: absolute;
-    font-size: 1em;
-    top: 50%;
-    margin-top: -.5em;
-  }
 }
 
 /* Medium Devices, Desktops */

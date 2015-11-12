@@ -1,4 +1,6 @@
 <section class="bookList">
-  <my-book ng-repeat="book in list.getBooks()" book="book">
+  <a href="javascript:void(0)" class="sortTitle" ng-click="list.books = list.getBooks('title')"><i class="fa fa-sort-alpha-asc"></i> TITLE</a>
+  <a href="javascript:void(0)" class="sortAuthor" ng-click="list.books = list.getBooks('author')"><i class="fa fa-sort-alpha-asc"></i> AUTHOR</a>
+  <my-book ng-repeat="book in list.books" book="book">
   </my-book>
 </section>

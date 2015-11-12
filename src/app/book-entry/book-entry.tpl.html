@@ -5,6 +5,7 @@
     <p class="welcomeParagraph">Read any new books lately?</p>  
   </section>
   <section id="book-entry" class="book-entry" ng-show="entry.showEntry">
+    <a href="javascript:void(0)"><i class="fa fa-times closeEntryIcon" ng-click="entry.showEntry=false"></i></a>
     <form ng-submit="entry.submitBook()">
       <label class="entryLabel" for="book-title">TITLE</label>
       <input id="book-title" class="entryInput" placeholder="Title" ng-model="entry.newBook.title" />
