@@ -7,7 +7,7 @@
     </section>
   </section>
 </main>
-<nav ng-show="nav.showNav" class="navBar">
+<nav ng-class="{'showNav': nav.showNav}" class="navBar">
   <ul class="navList">
     <li class="navItem" ng-repeat="book in nav.getBooks()">
       <h3 class="navTitle">{{ book.title }}</h3>

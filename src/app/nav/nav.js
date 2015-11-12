@@ -10,7 +10,6 @@ angular.module('app.nav', [])
   .controller('NavCtrl', function (booksService) {
     var nav = this;
     nav.showNav = false;
-
     nav.getBooks = function () {
       return booksService.getBooks();
     };

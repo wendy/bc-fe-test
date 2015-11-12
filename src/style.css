@@ -93,8 +93,12 @@ button:focus {
 /* NAV BAR */
 
 .navBar {
-  background-color: 
+  display: none;
   width: 100%;
+}
+
+.showNav {
+  display: block;
 }
 
 .navList {
@@ -274,11 +278,51 @@ button:focus {
 
 /* Small Devices, Tablets */
 @media (min-width : 768px) {
-  
+  .bookList {
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .bookItem {
+    width: 49%;
+  }
+
+  .navIcon, .closeIcon {
+    display: none;
+  }
+
+  .navBar {
+    display: block;
+  }
+
+  .navList {
+    background-color: #fff;
+    height: 2em;
+    position: static;
+  }
+
+  .navItem {
+    display: inline-block;
+    height: 100%;
+    width: 100px;
+    position: relative;
+  }
+
+  .navTitle {
+    position: absolute;
+    font-size: 1em;
+    top: 50%;
+    margin-top: -.5em;
+  }
 }
 
 /* Medium Devices, Desktops */
 @media (min-width : 992px) {
-
+  .welcome, .bookList {
+    margin: 1em auto;
+    max-width: 1000px;
+  }
 }
 
