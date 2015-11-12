@@ -253,7 +253,7 @@ button:focus {
 }
 
 .bookTitle {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-top: -1em;
   position: absolute;
   top: 50%;
@@ -289,6 +289,7 @@ button:focus {
   margin-top: -.5em;
   position: absolute; 
   top: 50%;
+  letter-spacing: .3em;
 }
 
 .star {

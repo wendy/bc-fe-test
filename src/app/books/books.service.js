@@ -2,7 +2,8 @@ angular.module('app.books.service', [])
   .factory('booksService', function () {
     var books = [
       {title: 'El Pooch', author: 'Alex Nelson', imageUrl: 'http://www.onthespot.co.uk/wp-content/uploads/2015/08/cute-dog-pictures-for-kids.jpg'},
-      {title: 'The Flight', author: 'Scott Masterson', imageUrl: 'http://s.hswstatic.com/gif/fuel-dump-1.jpg'}
+      {title: 'Ryze of the Faker', author: 'Ray Ma', imageUrl: 'http://ryzeonline.com/wp-content/uploads/ryze-league-of-legends.png'},
+      {title: 'How I Became an ADC', author: 'Thresh Lantern', imageUrl: 'http://images6.fanpop.com/image/photos/36400000/League-of-legends-image-league-of-legends-36418964-500-549.jpg'}
     ];
 
     var service = {
