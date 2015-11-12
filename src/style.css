@@ -115,20 +115,19 @@ a {
 
 .welcome {
   margin: 2%;
-  border: 2px solid #eee;
   background-color: #fff;
-  box-shadow: 0 0 1px #888;
+  box-shadow: 2px 2px 4px #ccc;
 }
 
 .welcomeHeader {
   width: 100%;
-  padding: 1em;
+  padding: 1.5em;
 }
 
 .welcomeTitle {
-  color: hotpink;
+  color: #fc2352;
   font-size: 1.5em;
-  padding-bottom: .75em;
+  padding-bottom: 1.25em;
 }
 
 .welcomeParagraph {
@@ -140,6 +139,7 @@ a {
   width: 100%;
   padding:1em;
   border-top: 2px solid #eee;
+  box-sizing: border-box;
 }
 
 .welcomeButton {
@@ -151,4 +151,64 @@ a {
 
 .yellow {
   color: #ffae42;
+}
+
+/* BOOK LIST */
+.bookList {
+  margin: 2%;
+}
+
+.bookItem {
+  background-color: #fff;
+  box-shadow: 2px 2px 4px #ccc;
+  height: 9em;
+  margin-bottom: .5em;
+  position: relative;
+}
+
+.bookImage {
+  width: 25%;
+  height: 100%;
+}
+
+.bookOuter {
+  position: absolute;
+  display: inline-block;
+  width: 75%;
+  height: 100%;
+  top:0;
+}
+
+.bookDes {
+  height: 70%;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.bookTitle {
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  margin-top: -1em;
+}
+
+.bookAuthor {
+  font-size: 1em;
+  color: #ccc;
+  position: absolute;
+  top: 50%;
+  margin-top: 1em;
+}
+
+.bookReview {
+  border-top: 1px solid #ccc;
+  height: 30%;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.review {
+  top: 50%;
+  position: absolute; 
+  margin-top: -.5em;
 }
