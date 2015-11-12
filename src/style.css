@@ -54,8 +54,9 @@ a {
 
 .mainHeader, .sectionHeader {
   background-color: #fc2352;
-  height: 2.5em;
+  height: 3em;
   width: 100%;
+  box-shadow: 2px 2px 4px #ccc;
 }
 
 .sectionHeader {
@@ -94,14 +95,14 @@ a {
   height: 100vh;
   position: fixed;
   width: 100%;
-
+  z-index: 9;
 }
 
 .navItem {
   background-color: #fff;
   border-bottom: 2px solid #eee;
   display: table;
-  height: 2.75em;
+  height: 3em;
   width: 100%;
 }
 
@@ -114,14 +115,14 @@ a {
 /* BOOK-ENTRY */
 
 .welcome {
-  margin: 2%;
   background-color: #fff;
   box-shadow: 2px 2px 4px #ccc;
+  margin: 2%;
 }
 
 .welcomeHeader {
-  width: 100%;
   padding: 1.5em;
+  width: 100%;
 }
 
 .welcomeTitle {
@@ -136,17 +137,17 @@ a {
 }
 
 .welcomeButtons {
-  width: 100%;
-  padding:1em;
   border-top: 2px solid #eee;
   box-sizing: border-box;
+  padding:1em;
+  width: 100%;
 }
 
 .welcomeButton {
-  border: none;
-  font-size: 1em;
   background-color: white;
+  border: none;
   cursor: pointer;
+  font-size: 1em;
 }
 
 .yellow {
@@ -167,16 +168,16 @@ a {
 }
 
 .bookImage {
-  width: 25%;
   height: 100%;
+  width: 25%;
 }
 
 .bookOuter {
-  position: absolute;
   display: inline-block;
-  width: 75%;
   height: 100%;
+  position: absolute;
   top:0;
+  width: 75%;
 }
 
 .bookDes {
@@ -187,17 +188,17 @@ a {
 
 .bookTitle {
   font-size: 2em;
+  margin-top: -1em;
   position: absolute;
   top: 50%;
-  margin-top: -1em;
 }
 
 .bookAuthor {
-  font-size: 1em;
   color: #ccc;
+  font-size: 1em;
+  margin-top: 1em;
   position: absolute;
   top: 50%;
-  margin-top: 1em;
 }
 
 .bookReview {
@@ -208,7 +209,11 @@ a {
 }
 
 .review {
-  top: 50%;
-  position: absolute; 
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
   margin-top: -.5em;
+  position: absolute; 
+  top: 50%;
 }
