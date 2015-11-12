@@ -1,22 +1,22 @@
 <section ng-show="entry.showWelcome" class="welcome">
-  <section class="welcomeHeader">
+  <section class="welcomeHeader" ng-show="!entry.showEntry">
     <h2 class="welcomeTitle">Welcome back!</h2>
     <p class="welcomeParagraph">It's been awhile.</p>
     <p class="welcomeParagraph">Read any new books lately?</p>  
   </section>
+  <section id="book-entry" class="book-entry" ng-show="entry.showEntry">
+    <form ng-submit="entry.submitBook()">
+      <label class="entryLabel" for="book-title">TITLE</label>
+      <input id="book-title" class="entryInput" placeholder="Title" ng-model="entry.newBook.title" />
+      <label class="entryLabel" for="book-author">AUTHOR</label>
+      <input id="book-author" class="entryInput" placeholder="Author" ng-model="entry.newBook.author" />
+      <label class="entryLabel" for="book-imageUrl">IMAGE URL</label>
+      <input id="book-imageUrl" class="entryInput" placeholder="Url" ng-model="entry.newBook.imageUrl" />
+      <button class="entryButton">Submit</button>
+    </form>
+  </section>
   <section class="welcomeButtons">
     <button ng-click="entry.showWelcome = false" class="welcomeButton">NO</button>
     <button ng-click="entry.showEntry = true" class="welcomeButton yellow">YES</button>
-  </section>
-  <section id="book-entry" class="book-entry" ng-show="entry.showEntry">
-    <form ng-submit="entry.submitBook()">
-      <label for="book-title">Title</label>
-      <input id="book-title" placeholder="Title" ng-model="entry.newBook.title" />
-      <label for="book-author">Author</label>
-      <input id="book-author" placeholder="Author" ng-model="entry.newBook.author" />
-      <label for="book-imageUrl">Image Url</label>
-      <input id="book-imageUrl" placeholder="Url" ng-model="entry.newBook.imageUrl" />
-      <button>Submit</button>
-    </form>
   </section>
 </section>
