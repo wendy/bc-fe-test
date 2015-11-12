@@ -1,14 +1,4 @@
 <section class="bookList">
-  <article class="bookItem" ng-repeat="book in list.getBooks()">
-    <img class="bookImage" src={{book.imageUrl}}>
-    <section class="bookOuter">
-      <section class="bookDes">
-        <h4 class="bookTitle">{{ book.title }}</h4>
-        <small class="bookAuthor">By {{ book.author }}</small>
-      </section>   
-      <section class="bookReview">
-        <button class="review yellow">REVIEW</button>
-      </section>
-    </section>
-  </article>
+  <my-book ng-repeat="book in list.getBooks()" book="book">
+  </my-book>
 </section>

@@ -63,6 +63,7 @@ button:focus {
   height: 3em;
   width: 100%;
   box-shadow: 2px 2px 4px #ccc;
+  z-index: 9;
 }
 
 .sectionHeader {
@@ -255,3 +256,29 @@ button:focus {
   position: absolute; 
   top: 50%;
 }
+
+.stars {
+  font-size: 1em;
+  margin-top: -.5em;
+  position: absolute; 
+  top: 50%;
+}
+
+.star {
+  cursor: pointer;
+}
+
+.starred {
+  color: #ffae42;
+}
+
+/* Small Devices, Tablets */
+@media (min-width : 768px) {
+  
+}
+
+/* Medium Devices, Desktops */
+@media (min-width : 992px) {
+
+}
+

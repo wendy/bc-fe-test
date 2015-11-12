@@ -1,0 +1,15 @@
+<article class="bookItem">
+  <img class="bookImage" ng-src="{{bookCtrl.book.imageUrl}}">
+  <section class="bookOuter">
+    <section class="bookDes">
+      <h4 class="bookTitle">{{ bookCtrl.book.title }}</h4>
+      <small class="bookAuthor">By {{ bookCtrl.book.author }}</small>
+    </section>   
+    <section class="bookReview">
+      <button class="review yellow" ng-if="!bookCtrl.showStars" ng-click="bookCtrl.showStars=true">REVIEW</button>
+      <section class="stars" ng-if="bookCtrl.showStars">
+        <i class="fa fa-star-o star" ng-click="bookCtrl.starsNum($index + 1)" ng-class="{'starred': bookCtrl.stars[$index + 1]}" ng-repeat="i in [1,2,3,4,5]"></i>
+      </section>
+    </section>
+  </section> 
+</article>
